@@ -99,7 +99,15 @@ con.connect(err => {
 // })
 
 // Limit the Results
-const sql = 'SELECT * FROM customers LIMIT 2';
+// const sql = 'SELECT * FROM customers LIMIT 2';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+// })
+
+// Drop Table
+// const sql = 'DROP TABLE customers';
+const sql = 'DROP TABLE IF EXISTS customers';
 con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
