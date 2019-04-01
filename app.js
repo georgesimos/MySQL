@@ -72,7 +72,14 @@ con.connect(err => {
 // const sql = 'SELECT * FROM customers WHERE username = "geosimos"';
 // const sql = 'SELECT * FROM customers WHERE username LIKE "t%"';
 // const sql = 'SELECT * FROM customers WHERE username LIKE "t%" or id = 1';
-const sql = 'SELECT * FROM customers WHERE username LIKE "t%" and id = 4';
+// const sql = 'SELECT * FROM customers WHERE username LIKE "t%" and id = 4';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+// })
+
+// Order By
+const sql = 'SELECT * FROM customers ORDER BY id DESC';
 con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
