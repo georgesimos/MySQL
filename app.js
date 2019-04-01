@@ -61,7 +61,18 @@ con.connect(err => {
 // })
 
 // Select Specific Data
-const sql = 'SELECT name, id FROM customers';
+// const sql = 'SELECT name, id FROM customers';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+// })
+
+
+// Where Clause
+// const sql = 'SELECT * FROM customers WHERE username = "geosimos"';
+// const sql = 'SELECT * FROM customers WHERE username LIKE "t%"';
+// const sql = 'SELECT * FROM customers WHERE username LIKE "t%" or id = 1';
+const sql = 'SELECT * FROM customers WHERE username LIKE "t%" and id = 4';
 con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
