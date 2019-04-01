@@ -20,8 +20,16 @@ con.connect(err => {
 // })
 
 // Drop Table
-const sql = 'DROP TABLE customers';
+// const sql = 'DROP TABLE customers';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log('Table has been Droped...')
+// })
+
+
+// Alter Table
+const sql = 'ALTER TABLE customers ADD COLUMN username VARCHAR(255)';
 con.query(sql, (err, res) => {
     if (err) throw err;
-    console.log('Table has been Droped...')
+    console.log('Table has been Altered...')
 })
