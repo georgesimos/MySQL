@@ -6,3 +6,8 @@ con.connect(err => {
     console.log('Connected to database')
 })
 
+// Create Database
+con.query('CREATE DATABASE store', (err, res) => {
+    if (err) throw err;
+    console.log('Database Created')
+})
