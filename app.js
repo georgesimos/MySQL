@@ -79,7 +79,14 @@ con.connect(err => {
 // })
 
 // Order By
-const sql = 'SELECT * FROM customers ORDER BY id DESC';
+// const sql = 'SELECT * FROM customers ORDER BY id DESC';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+// })
+
+// Delete
+const sql = 'DELETE FROM customers WHERE username = "tina"';
 con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
