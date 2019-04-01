@@ -26,10 +26,16 @@ con.connect(err => {
 //     console.log('Table has been Droped...')
 // })
 
-
 // Alter Table
-const sql = 'ALTER TABLE customers ADD COLUMN username VARCHAR(255)';
+// const sql = 'ALTER TABLE customers ADD COLUMN username VARCHAR(255)';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log('Table has been Altered...')
+// })
+
+// Insert Into
+const sql = 'INSERT INTO customers (name, email, username) VALUES ("Tester Simos", "tester@gmail.com","tester")';
 con.query(sql, (err, res) => {
     if (err) throw err;
-    console.log('Table has been Altered...')
+    console.log('Data Inserted Into Table...')
 })
