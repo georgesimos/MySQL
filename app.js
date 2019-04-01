@@ -67,7 +67,6 @@ con.connect(err => {
 //     console.log(res)
 // })
 
-
 // Where Clause
 // const sql = 'SELECT * FROM customers WHERE username = "geosimos"';
 // const sql = 'SELECT * FROM customers WHERE username LIKE "t%"';
@@ -93,7 +92,14 @@ con.connect(err => {
 // })
 
 // Update
-const sql = 'UPDATE customers SET name = "John P. Elder" WHERE name = "Tim"';
+// const sql = 'UPDATE customers SET name = "John P. Elder" WHERE name = "Tim"';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+// })
+
+// Limit the Results
+const sql = 'SELECT * FROM customers LIMIT 2';
 con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
