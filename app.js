@@ -54,7 +54,14 @@ con.connect(err => {
 // })
 
 // Select Data
-const sql = 'SELECT *  FROM customers';
+// const sql = 'SELECT *  FROM customers';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+// })
+
+// Select Specific Data
+const sql = 'SELECT name, id FROM customers';
 con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
