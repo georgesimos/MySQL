@@ -41,14 +41,21 @@ con.connect(err => {
 // })
 
 // Insert Into (Many)
-const sql = 'INSERT INTO customers (name, email, username) VALUES ?';
-const values = [
-    ['Tim', 'tim@tim.com', 'tim'],
-    ['tina', 'tina@tina.com', 'tina'],
-    ['lara', 'lara@lara.com', 'lara'],
-]
-con.query(sql, [values], (err, res) => {
+// const sql = 'INSERT INTO customers (name, email, username) VALUES ?';
+// const values = [
+//     ['Tim', 'tim@tim.com', 'tim'],
+//     ['tina', 'tina@tina.com', 'tina'],
+//     ['lara', 'lara@lara.com', 'lara'],
+// ]
+// con.query(sql, [values], (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+//     console.log('Records Inserted Into Table...: ' + res.affectedRows)
+// })
+
+// Select Data
+const sql = 'SELECT *  FROM customers';
+con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
-    console.log('Records Inserted Into Table...: ' + res.affectedRows)
 })
