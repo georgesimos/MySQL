@@ -86,7 +86,14 @@ con.connect(err => {
 // })
 
 // Delete
-const sql = 'DELETE FROM customers WHERE username = "tina"';
+// const sql = 'DELETE FROM customers WHERE username = "tina"';
+// con.query(sql, (err, res) => {
+//     if (err) throw err;
+//     console.log(res)
+// })
+
+// Update
+const sql = 'UPDATE customers SET name = "John P. Elder" WHERE name = "Tim"';
 con.query(sql, (err, res) => {
     if (err) throw err;
     console.log(res)
